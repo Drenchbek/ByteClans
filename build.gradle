@@ -1,24 +1,33 @@
-﻿plugins {
+plugins {
     id 'java'
     id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
+
 group = 'net.bytemc.anarchy.clans'
 version = '1.0.0-RELEASE'
+
 repositories {
     mavenCentral()
-    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url = 'https://papermc.io' }
 }
+
 dependencies {
     compileOnly 'io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT'
 }
+
 java {
-    toolchain.languageVersion = JavaLanguageVersion.of(21)
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
 }
+
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8'
 }
+
 shadowJar {
     archiveClassifier.set('')
     minimize()
 }
+
 build.dependsOn shadowJar
