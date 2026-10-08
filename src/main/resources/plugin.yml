@@ -1,0 +1,9 @@
+﻿name: ByteClans
+version: '${version}'
+main: net.bytemc.anarchy.clans.ByteClans
+api-version: '1.21'
+author: 'ByteMC_Dev'
+commands:
+  clan:
+    description: 'Main clan command'
+    aliases: [c, klan]
