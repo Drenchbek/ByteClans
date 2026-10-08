@@ -8,10 +8,13 @@ version = '1.0.0-RELEASE'
 
 repositories {
     mavenCentral()
+    // Rasmiy yangilangan PaperMC ombori
+    maven { url = 'https://papermc.io' }
     maven { url = 'https://papermc.io' }
 }
 
 dependencies {
+    // 1.21.1 Paper API kutubxonasi
     compileOnly 'io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT'
 }
 
