@@ -8,13 +8,12 @@ version = '1.0.0-RELEASE'
 
 repositories {
     mavenCentral()
-    // Rasmiy yangilangan PaperMC ombori
-    maven { url = 'https://papermc.io' }
-    maven { url = 'https://papermc.io' }
+    // PaperMC rasmiy eng so'nggi ombori
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
 }
 
 dependencies {
-    // 1.21.1 Paper API kutubxonasi
+    // 1.21.1 versiyasining eng xatosiz va barqaror build tahriri
     compileOnly 'io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT'
 }
 
